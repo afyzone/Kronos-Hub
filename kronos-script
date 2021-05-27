@@ -7,5 +7,5 @@ elseif a == 6329844902 then -- Last Piece
 loadstring(game:HttpGet("https://raw.githubusercontent.com/LeadMarker/LeadMarker/main/LastPiece"))()
     print("Executed, if you see errors post it in the Discord server")
 else
-    game.Players.LocalPlayer:Kick("Unsupported Games")
+    game.Players.LocalPlayer:Kick("Kronos Notifier: Unsupported Game")
 end

@@ -2,10 +2,10 @@ local a = game.PlaceId
 
 if a == 6574375780 then --nok piece
 loadstring(game:HttpGet("https://raw.githubusercontent.com/LeadMarker/LeadMarker/main/NokPiece"))()
-    print("working")
+    print("Executed, if you see errors post it in the Discord server")
 elseif a == 6329844902 then -- Last Piece
 loadstring(game:HttpGet("https://raw.githubusercontent.com/LeadMarker/LeadMarker/main/LastPiece"))()
-    print("working")
+    print("Executed, if you see errors post it in the Discord server")
 else
     game.Players.LocalPlayer:Kick("Unsupported Games")
 end

@@ -1,5 +1,5 @@
 -- // Dependencies
-_G.PRED = 0.030
+_G.PRED = 0.037
 local Aiming = loadstring(game:HttpGet("https://raw.githubusercontent.com/Stefanuk12/ROBLOX/master/Universal/Aiming/GamePatches/2788229376.lua"))()
 Aiming.TeamCheck(false)
 Aiming.ShowFOV = false
@@ -19,7 +19,7 @@ local CurrentCamera = Workspace.CurrentCamera
 local DaHoodSettings = {
     SilentAim = true,
     AimLock = false,
-    Prediction = 0.105,
+    Prediction = 0.165,
     AimLockKeybind = Enum.KeyCode.E
 }
 getgenv().DaHoodSettings = DaHoodSettings
@@ -94,15 +94,5 @@ RunService.RenderStepped:Connect(function()
     local PingNumber = pingValue[1]
     
     DaHoodSettings.Prediction = PingNumber / 1000 + _G.PRED
-                if Aiming.Character.Humanoid.Jump == true and AimlockTarget.Character.Humanoid.FloorMaterial == Enum.Material.Air then
-                    Aiming.TargetPart = "RightFoot"
-                else
-                    Aiming.Character:WaitForChild("Humanoid").StateChanged:Connect(function(new)
-                if new == Enum.HumanoidStateType.Freefall then
-                    Aiming.TargetPart = "RightFoot"
-                else
-                    Aiming.TargetPart = Aiming.SelectedPart
-                    end
-                    end)
-                end
+    end
 end)

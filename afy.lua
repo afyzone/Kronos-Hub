@@ -10,6 +10,12 @@ local Workspace = game:GetService("Workspace")
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local UserInputService = game:GetService("UserInputService")
+local ping = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
+local Value = tostring(ping)
+local pingValue = Value:split(" ")
+local PingNumber = pingValue[1]
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
 -- // Vars
 local LocalPlayer = Players.LocalPlayer
 local Mouse = LocalPlayer:GetMouse()
@@ -56,8 +62,6 @@ __index = hookmetamethod(game, "__index", function(t, k)
     -- // Return
     return __index(t, k)
 end)
-local player = game.Players.LocalPlayer
-local mouse = player:GetMouse()
 mouse.KeyDown:Connect(function(key)
     if key == "v" then
         if Aiming.Enabled == false then
@@ -73,10 +77,6 @@ mouse.KeyDown:Connect(function(key)
 	end
 end)
 RunService.RenderStepped:Connect(function()
-    local ping = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
-    local Value = tostring(ping)
-    local pingValue = Value:split(" ")
-    local PingNumber = pingValue[1]
     DaHoodSettings.Prediction = PingNumber / 1000 + _G.PRED
     end
 end)

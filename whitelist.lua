@@ -1,5 +1,5 @@
 uid = game.Players.LocalPlayer.userId
-plist = {1299452235}
+plist = {"Sunday", "Monday"}
 if uid == plist then
   loadstring(game:HttpGet('https://raw.githubusercontent.com/Afyadh/Kronos-Hub/main/afy.lua'))()
 else

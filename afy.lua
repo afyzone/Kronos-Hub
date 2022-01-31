@@ -78,5 +78,4 @@ RunService.RenderStepped:Connect(function()
     local pingValue = Value:split(" ")
     local PingNumber = pingValue[1]
     DaHoodSettings.Prediction = PingNumber / 1000 + _G.PRED
-    end
-end)
+end

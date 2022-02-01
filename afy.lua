@@ -1,5 +1,5 @@
 -- // Dependencies
-_G.PRED = 0.125
+_G.PRED = 0.03
 local Aiming = loadstring(game:HttpGet("https://raw.githubusercontent.com/Stefanuk12/ROBLOX/master/Universal/Aiming/GamePatches/2788229376.lua"))()
 Aiming.TeamCheck(false)
 Aiming.ShowFOV = false

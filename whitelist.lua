@@ -6,7 +6,7 @@ if ids[game.Players.LocalPlayer.UserId] then
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Afyadh/Kronos-Hub/main/afy.lua'))()
 elseif game.Players.LocalPlayer.UserId == 2225680749 then
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Afyadh/Kronos-Hub/main/do.lua'))()
-    print'r'
+    print'ra'
 else
   game.Players.LocalPlayer:Kick('Not whitelisted by afy')
 end

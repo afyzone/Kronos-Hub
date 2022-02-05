@@ -3,7 +3,7 @@ _G.PRED = 0.03
 local Aiming = loadstring(game:HttpGet("https://raw.githubusercontent.com/Stefanuk12/ROBLOX/master/Universal/Aiming/GamePatches/2788229376.lua"))()
 Aiming.TeamCheck(false)
 Aiming.ShowFOV = true
-Aiming.FOV = 8
+Aiming.FOV = 5
 Aiming.ShowCredits = False
 -- // Services
 local Workspace = game:GetService("Workspace")

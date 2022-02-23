@@ -75,6 +75,3 @@ Mouse.KeyDown:Connect(function(key)
 			end
 	end
 end)
-RunService.RenderStepped:Connect(function()
-    DaHoodSettings.Prediction = PingNumber / 1000 + _G.PRED
-end)

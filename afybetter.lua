@@ -75,6 +75,7 @@ Mouse.KeyDown:Connect(function(key)
 		Aiming.Enabled = false
 			end
 	end
-end)RunService.RenderStepped:Connect(function()
+end)
+RunService.RenderStepped:Connect(function()
 	DaHoodSettings.Prediction = PingNumber / 1000 + _G.PRED
 end)

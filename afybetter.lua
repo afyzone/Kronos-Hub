@@ -2,6 +2,7 @@ local Aiming = loadstring(game:HttpGet("https://raw.githubusercontent.com/Afyadh
 Aiming.TeamCheck(false)
 Aiming.ShowFOV = false
 Aiming.FOV = 18
+_G.PRED = 0.03
 
 local ping = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
 local Value = tostring(ping)
@@ -74,4 +75,6 @@ Mouse.KeyDown:Connect(function(key)
 		Aiming.Enabled = false
 			end
 	end
+end)RunService.RenderStepped:Connect(function()
+	DaHoodSettings.Prediction = PingNumber / 1000 + _G.PRED
 end)

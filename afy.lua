@@ -1,6 +1,6 @@
 -- // Dependencies
 _G.PRED = 0.03
-local Aiming = loadstring(game:HttpGet("https://raw.githubusercontent.com/Stefanuk12/ROBLOX/master/Universal/Aiming/GamePatches/2788229376.lua"))()
+local Aiming = loadstring(game:HttpGet("https://raw.githubusercontent.com/Afyadh/Kronos-Hub/main/aimmodule.lua", true))()
 Aiming.TeamCheck(false)
 Aiming.ShowFOV = false
 Aiming.FOV = 25
@@ -72,15 +72,15 @@ mouse.KeyDown:Connect(function(key)
 end)
 RunService.RenderStepped:Connect(function()
 	DaHoodSettings.Prediction = PingNumber / 1000 + _G.PRED
-                if Aiming.Character.Humanoid.Jump == true and AimlockTarget.Character.Humanoid.FloorMaterial == Enum.Material.Air then
-                    Aiming.TargetPart = "LowerTorso"
-                else
-                    Aiming.Character:WaitForChild("Humanoid").StateChanged:Connect(function(new)
-                if new == Enum.HumanoidStateType.Freefall then
-                    Aiming.TargetPart = "LowerTorso"
-                else
-                    Aiming.TargetPart = Aiming.SelectedPart
-                    end
-                    end)
-                end
+	if Aiming.Character.Humanoid.Jump == true and AimlockTarget.Character.Humanoid.FloorMaterial == Enum.Material.Air then
+	    Aiming.TargetPart = "LowerTorso"
+	else
+	    Aiming.Character:WaitForChild("Humanoid").StateChanged:Connect(function(new)
+	if new == Enum.HumanoidStateType.Freefall then
+	    Aiming.TargetPart = "LowerTorso"
+	else
+	    Aiming.TargetPart = Aiming.SelectedPart
+	    end
+	    end)
+	end
 end)

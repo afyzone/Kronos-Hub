@@ -2,7 +2,7 @@ local Aiming = loadstring(game:HttpGet("https://raw.githubusercontent.com/Afyadh
 Aiming.TeamCheck(false)
 Aiming.ShowFOV = false
 Aiming.FOV = 18
-_G.PRED = 0.03
+_G.PRED = 0.09
 
 local ping = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
 local Value = tostring(ping)
